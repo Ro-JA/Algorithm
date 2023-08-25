@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Algorithm</string>
+    <string name="enter_array">Enter number</string>
 </resources>
