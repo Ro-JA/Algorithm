@@ -2,10 +2,30 @@ package com.example.algorithm
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.algorithm.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding // создаем переменую типа binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater) //иниацилизируем обект который будет использоваться для доступа к view
+        setContentView(binding.root) // передаем его что бы сделать активным экраном
+        binding.buttonMinValue.setOnClickListener { minValueArray(getValuesEditText()) }
     }
+
+    private fun minValueArray(array: IntArray) {
+        var mimValue = 0
+        var minIndex = array[mimValue]
+        for(i in 1..<array.size) {
+
+        }
+    }
+
+    private fun getValuesEditText(): IntArray {
+        val stringInEditText = binding.editTextNumber.text.toString()
+        return stringInEditText.split(",").map { it.toInt() }.toIntArray()
+    }
+
+
 }

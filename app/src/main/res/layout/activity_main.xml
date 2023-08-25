@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
 
     <EditText
@@ -14,9 +14,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/padding_8dp"
-        android:inputType="number"
         android:ems="10"
         android:hint="@string/enter_array"
+        android:inputType="number" />
+    <TextView
+        android:id="@+id/text_view_array"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/you_array"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_8dp"/>
 
-/>
+    <Button
+        android:id="@+id/button_min_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_min_algorithm"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_text_min_value"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/padding_8dp"
+        />
 </androidx.appcompat.widget.LinearLayoutCompat>

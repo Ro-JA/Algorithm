@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Algorithm</string>
-    <string name="enter_array">Enter number</string>
+    <string name="enter_array">Enter array number</string>
+    <string name="button_min_algorithm">minimum value of the array</string>
+    <string name="edit_text_min_value">Minimum value: %s</string>
+    <string name="you_array">you array</string>
 </resources>
