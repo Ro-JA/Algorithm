@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonMinValue.setOnClickListener { minValueArray(getValuesEditText()) }
     }
 
-    private fun minValueArray(array: IntArray) {
+    private fun minValueArray(array: IntArray) { // доделать finish
         var mimValue = 0
         var minIndex = array[mimValue]
         for(i in 1..<array.size) {
