@@ -9,16 +9,20 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater) //иниацилизируем обект который будет использоваться для доступа к view
+        binding =
+            ActivityMainBinding.inflate(layoutInflater) //иниацилизируем обект который будет использоваться для доступа к view
         setContentView(binding.root) // передаем его что бы сделать активным экраном
         binding.buttonMinValue.setOnClickListener { minValueArray(getValuesEditText()) }
     }
 
     private fun minValueArray(array: IntArray) { // доделать finish
-        var mimValue = 0
-        var minIndex = array[mimValue]
-        for(i in 1..<array.size) {
-
+        var mimValue = array[0]
+        var minIndex = 0
+        for (i in 1..<array.size - 1) {
+            if (array[i] < array[mimValue]) {
+                mimValue = array[i]
+                minIndex = i
+            }
         }
     }
 
