@@ -15,29 +15,29 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/padding_8dp"
         android:ems="10"
-        android:hint="@string/enter_array"
-        android:inputType="number" />
+        android:hint="@string/enter_array" />
+
     <TextView
         android:id="@+id/text_view_array"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/you_array"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/padding_8dp"/>
+        android:layout_margin="@dimen/padding_8dp"
+        android:hint="@string/you_array" />
 
     <Button
         android:id="@+id/button_min_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_min_algorithm"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/padding_8dp"/>
+        android:layout_margin="@dimen/padding_8dp"
+        android:text="@string/button_min_algorithm" />
+
     <TextView
         android:id="@+id/text_view_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/edit_text_min_value"
         android:layout_gravity="center"
         android:layout_margin="@dimen/padding_8dp"
-        />
+        android:text="@string/edit_text_min_value" />
 </androidx.appcompat.widget.LinearLayoutCompat>

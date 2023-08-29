@@ -12,7 +12,12 @@ class MainActivity : AppCompatActivity() {
         binding =
             ActivityMainBinding.inflate(layoutInflater) //иниацилизируем обект который будет использоваться для доступа к view
         setContentView(binding.root) // передаем его что бы сделать активным экраном
-        binding.buttonMinValue.setOnClickListener { minValueArray(getValuesEditText()) }
+        binding.buttonMinValue.setOnClickListener {}
+    }
+    private fun numEditText(): IntArray { // функция преоброзует воденые значения в массив чисел
+        val stringEditText = binding.editTextNumber.text.toString()
+        val numberArray = stringEditText.split( " ").map { it.toInt() }.toIntArray()
+        return numberArray
     }
 
     private fun minValueArray(array: IntArray) { // функция возрощает минимально значения из массива
@@ -24,13 +29,5 @@ class MainActivity : AppCompatActivity() {
                 minIndex = i
             }
         }
-        binding.textViewShow.text = mimValue.toString()
     }
-
-    private fun getValuesEditText(): IntArray {
-        val stringInEditText = binding.editTextNumber.text.toString()
-        return stringInEditText.split(",").map { it.toInt() }.toIntArray()
-    }
-
-
 }
