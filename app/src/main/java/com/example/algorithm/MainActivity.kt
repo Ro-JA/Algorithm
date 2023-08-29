@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding.buttonMinValue.setOnClickListener { minValueArray(getValuesEditText()) }
     }
 
-    private fun minValueArray(array: IntArray): Int { // функция возрощает минимально значения из массива
+    private fun minValueArray(array: IntArray) { // функция возрощает минимально значения из массива
         var mimValue = array[0]
         var minIndex = 0
         for (i in 1..<array.size - 1) {
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 minIndex = i
             }
         }
-        return mimValue
+        binding.textViewShow.text = mimValue.toString()
     }
 
     private fun getValuesEditText(): IntArray {
