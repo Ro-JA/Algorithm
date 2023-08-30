@@ -15,19 +15,24 @@ class MainActivity : AppCompatActivity() {
         binding.buttonMinValue.setOnClickListener {
             showArray()
             minValueArray(numEditText())
+            showValue()
         }
     }
 
-    private fun numEditText(): IntArray { // функция преоброзует воденые значения в массив чисел
+    private fun showArray() { // функция показывает массив пользователю
+        binding.textViewArray.text = binding.editTextNumber.text.toString()
+    }
+
+    private fun numEditText(): IntArray { // функция преоброзует введеные значения в массив чисел
         val stringEditText = binding.editTextNumber.text.toString()
         return stringEditText.split(" ").map { it.toInt() }.toIntArray()
     }
 
-    private fun showArray() {
-        binding.textViewArray.text = numEditText().joinToString()
+    private fun showValue() { // функция показывает минимальное значения массива пользователю
+        binding.textViewShow.text = "Minimum value ${minValueArray(numEditText()).toString()}"
     }
 
-    private fun minValueArray(array: IntArray) { // функция возрощает минимально значения из массива
+    private fun minValueArray(array: IntArray): Int { // функция возрощает минимально значения из массива
         var mimValue = array[0]
         var minIndex = 0
         for (i in 1..<array.size - 1) {
@@ -36,5 +41,6 @@ class MainActivity : AppCompatActivity() {
                 minIndex = i
             }
         }
+        return mimValue
     }
 }
