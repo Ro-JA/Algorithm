@@ -15,7 +15,8 @@
         android:layout_gravity="center"
         android:layout_margin="@dimen/padding_8dp"
         android:ems="10"
-        android:hint="@string/enter_array" />
+        android:hint="@string/enter_array"
+        android:inputType="number"/>
 
     <TextView
         android:id="@+id/text_view_array"
